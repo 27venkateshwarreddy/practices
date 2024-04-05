@@ -1,0 +1,249 @@
+accounts examples:
+
+class Employee {
+    String name;
+    int age;
+    double salary;
+    public Employee(String n, int a, double s) {
+        name = n;
+        age = a;
+        salary = s;
+    }
+    public void displayInfo() {
+        System.out.println("venky: " + name);
+        System.out.println("24: " + age);
+        System.out.println("50000: $" + salary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee employee1 = new Employee("liya", 30, 50000);
+        Employee employee2 = new Employee("venky", 25, 60000);
+        employee1.displayInfo();
+        System.out.println();
+        employee2.displayInfo();
+    }
+}
+
+output:
+
+venky: liya
+24: 30
+50000: $50000.0
+
+venky: venky
+24: 25
+50000: $60000.0
+
+=== Code Execution Successful ===
+____________________________________________________________________________________________________
+class and objects in Java:
+
+class Person {
+    String name;
+    int age;
+    public Person(String n, int a) {
+        name = n;
+        age = a;
+    }
+    
+    public void displayInfo() {
+        System.out.println("venky: " + name);
+        System.out.println("24: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("venky", 30);
+        Person person2 = new Person("liya", 25);
+        person1.displayInfo();
+        System.out.println(); 
+        person2.displayInfo();
+    }
+}
+output:
+venky: venky
+24: 30
+
+venky: liya
+24: 25
+
+=== Code Execution Successful ===
+___________________________________________________________________________________________________
+Employee :
+
+public class Employee {
+    private String name;
+    private int id;
+    private double salary;
+    public Employee(String name, int id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public void giveRaise(double amount) {
+        salary += amount;
+    }
+    public void printInfo() {
+        System.out.println("venky: " + name);
+        System.out.println("2526: " + id);
+        System.out.println("50000: " + salary);
+    }
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("venky", 1001, 50000);
+        emp1.printInfo();
+        emp1.giveRaise(5000);
+        System.out.println("venky:");
+        emp1.printInfo();
+    }
+}
+
+output:
+venky: venky
+2526: 1001
+50000: 50000.0
+venky:
+venky: venky
+2526: 1001
+50000: 55000.0
+
+=== Code Execution Successful ===
+____________________________________________________________________________________________
+package in.eg.java.demo;
+
+public class Bank {
+    private int bankId;
+    private String bankName;
+    private String ifscCode;
+    private String branchName; 
+
+    public int getBankId() {
+        return bankId;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public String getIfscCode() {
+        return ifscCode;
+    }
+
+    public String getBranchName() {
+        return branchName;
+    }
+
+
+    public void setBankId(int newBankId) {
+        bankId = newBankId;
+    }
+
+    public void setBankName(String newBankName) {
+        bankName = newBankName;
+    }
+
+    public void setIfscCode(String newIfscCode) {
+        ifscCode = newIfscCode;
+    }
+
+    public void setBranchName(String newBranchName) {
+        branchName = newBranchName;
+    }
+}
+___________________________________________________________________________________________________
+Nested Loop :
+
+A loop can be nested inside another looop 
+
+nested loop consisits of a outer loop and one or more inner loop .
+
+each time the outer loop is excuted then inner loop will executed again
+
+ex:
+
+for( int i =0 ; i<=3 ; i++)
+{
+  for(int j =0 ; j<2 ; j++)
+  {
+     System.out.println(i + " " + j);
+  }
+   System.out.println()
+
+}
+
+Output :
+ 0 0
+ 0 1
+
+1 0
+1 1
+
+2 0 
+2 1
+__________________________________________________________________________________________________
+variyable types:
+
+
+class VariableTypes
+{
+   int a ;
+   static int b ;
+
+ public static void main(String args[])
+  {
+    int c =30 ; // local variable - declared with in a main method and we have to initalized
+    VariableTypes  var = new VariableTypes();
+   System.out.println(b);  // output =0 default value for static variable is zero
+   System.out.println(c); // for local variable we have to intailaized the value  output =30
+   System.out.println(var.a);  // error :Emp1.java:85: error: non-static variable a cannot be referenced from a static context
+// for a variable we have to create a object 
+  }
+}
+____________________________________________________________________________________________________
+
+Example Program to get Infinite Loop By using for loop :
+
+class infiniteLoop
+{
+  public static void main(String args[])
+  {
+    for(;;)
+     {
+       System.out.println("loop");
+     }
+}
+
+
+output :
+---------
+loop 
+loop
+loop
+loop
+:
+:
+: 
+infinite times
+
+
+output: 
+---------
+hi hi hi hi .......... infinite times 
+
+
